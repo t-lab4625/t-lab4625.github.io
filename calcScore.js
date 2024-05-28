@@ -36,6 +36,11 @@ var calc = function () {
 		vocal = document.getElementById('vocal').value,
 		dance = document.getElementById('dance').value,
 		visual = document.getElementById('visual').value;
+	
+	// 空欄なら
+	if (vocal == '') vocal = 0;
+	if (dance == '') dance = 0;
+	if (visual == '') visual = 0;
 
 	// 現在の評価点(ステータスと順位,最終試験後の+30込み)
 	var nowScore = parseInt(((
