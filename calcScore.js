@@ -1,13 +1,19 @@
 // ページが読み込まれた時の処理
-window.addEventListener("load", () => { 
+window.addEventListener("load", () => {
 	// 値の読み込み
-	var jsonVocal = localStorage.getItem('vocal'),
-		jsonDance = localStorage.getItem('dance'),
-		jsonVisual = localStorage.getItem('visual');
+	var vocal = JSON.parse(localStorage.getItem('vocal')),
+		dance = JSON.parse(localStorage.getItem('dance')),
+		visual = JSON.parse(localStorage.getItem('visual'));
+
+	// 非数なら
+	if (isNaN(vocal)) vocal = 0;
+	if (isNaN(dance)) dance = 0;
+	if (isNaN(visual)) visual = 0;
+
 	// 書き込み
-	document.getElementById('vocal').value = JSON.parse(jsonVocal);
-	document.getElementById('dance').value = JSON.parse(jsonDance);
-	document.getElementById('visual').value = JSON.parse(jsonVisual);
+	document.getElementById('vocal').value = vocal;
+	document.getElementById('dance').value = dance;
+	document.getElementById('visual').value = visual;
 
 	calc();
 });
