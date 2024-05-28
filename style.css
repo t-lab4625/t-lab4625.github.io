@@ -3,7 +3,7 @@
 	margin: 0px;
 	padding: 0px;
 	font-family: sans-serif;
-	font-size: 16px;
+	font-size: 20px;
 	color: #333;
 }
 
@@ -54,7 +54,7 @@
 
 .body .grid-rank {
 	display: grid;
-	grid-template-columns: fit-content(100%) fit-content(100%);
+	grid-template-columns: auto auto;
 	word-break: break-word;
 	text-align: center;
 }
