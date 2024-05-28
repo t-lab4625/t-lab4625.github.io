@@ -6,9 +6,9 @@ window.addEventListener("load", () => {
 		visual = JSON.parse(localStorage.getItem('visual'));
 
 	// 非数なら
-	if (isNaN(vocal)) vocal = 0;
-	if (isNaN(dance)) dance = 0;
-	if (isNaN(visual)) visual = 0;
+	if (isNaN(vocal) || vocal == null) vocal = 0;
+	if (isNaN(dance) || dance == null) dance = 0;
+	if (isNaN(visual) || visual == null) visual = 0;
 
 	// 書き込み
 	document.getElementById('vocal').value = vocal;
