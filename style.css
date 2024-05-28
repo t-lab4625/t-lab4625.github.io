@@ -1,0 +1,83 @@
+/* 全体 */
+* {
+	margin: 0px;
+	padding: 0px;
+	font-family: sans-serif;
+	font-size: 16px;
+	color: #333;
+}
+
+/* ヘッダ */
+.header {
+	text-align: center;
+	background-color: #333;
+}
+
+.header h1 {
+	color: #fff;
+	font-size: 30px;
+	padding: 20px;
+}
+
+/* ボディ */
+.body {
+	color: #333;
+	background-color: #fff;
+	margin: 16px;
+}
+
+.body .explanation,
+.body .input,
+.body .output {
+	padding: 8px;
+}
+
+.body .output {
+	padding-bottom: 16px;
+}
+
+.body .input div {
+	padding-left: 15px;
+}
+
+.body input[type="number"] {
+	padding-left: 4px;
+	width: 8em;
+	margin-top: 20px;
+}
+
+.body input[type="button"] {
+	padding-left: 4px;
+	width: 14em;
+	margin-top: 20px;
+}
+
+.body .grid-rank {
+	display: grid;
+	grid-template-columns: fit-content(100%) fit-content(100%);
+	word-break: break-word;
+	text-align: center;
+}
+
+.body .grid-rank div {
+	margin-right: -1px;
+	margin-bottom: -1px;
+	padding: 0px 5px;
+	border: 1px solid #333;
+}
+
+.body .grid-rank .rank-th,
+.body .grid-rank .rank {
+	color: #eee;
+	background-color: #555;
+}
+
+/* フッタ */
+.footer {
+	color: #fff;
+	font-size: 15px;
+	text-align: right;
+	padding: 10px;
+	padding-right: 10px;
+	background-color: #333;
+}
