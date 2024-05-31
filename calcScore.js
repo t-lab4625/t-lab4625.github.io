@@ -80,7 +80,7 @@ var calcFinalExamScore = function (needScore) {
 	else if (needScore <= 3450)
 		return 20000 + Math.ceil((needScore - 3050) / 0.04);
 	else if (needScore <= 3650)
-		return 30000 + Math.ceil((needScore = 3450) / 0.02);
+		return 30000 + Math.ceil((needScore - 3450) / 0.02);
 	else
 		return 40000 + Math.ceil((needScore - 3650) / 0.01);
 }
