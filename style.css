@@ -74,7 +74,7 @@
 /* フッタ */
 .footer {
 	color: #fff;
-	font-size: 15px;
+	/* font-size: 15px; */
 	text-align: right;
 	padding: 10px;
 	padding-right: 10px;

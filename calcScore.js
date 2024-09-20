@@ -20,8 +20,11 @@ window.addEventListener("load", () => {
 
 // 計算・表示
 var calc = function () {
-	// 各評価ランクのボーダー
-	var s = 13000,
+	// ステータス最大値
+	var Max = 1800,
+		// 各評価ランクのボーダー
+		s_plus = 14500,
+		s = 13000,
 		a_plus = 11500,
 		a = 10000,
 		b_plus = 8000,
@@ -29,14 +32,14 @@ var calc = function () {
 		c_plus = 4500,
 		c = 3000,
 		// 評価ランクスコア
-		rank = [s, a_plus, a, b_plus, b, c_plus, c],
+		rank = [s_plus, s, a_plus, a, b_plus, b, c_plus, c],
 		// 評価ランク名
-		rankName = ['s', 'a_plus', 'a', 'b_plus', 'b', 'c_plus', 'c'],
+		rankName = ['s_plus', 's', 'a_plus', 'a', 'b_plus', 'b', 'c_plus', 'c'],
 		// 各ステータス値
 		vocal = document.getElementById('vocal').value,
 		dance = document.getElementById('dance').value,
 		visual = document.getElementById('visual').value;
-	
+
 	// 空欄なら
 	if (vocal == '') vocal = 0;
 	if (dance == '') dance = 0;
@@ -44,9 +47,9 @@ var calc = function () {
 
 	// 現在の評価点(ステータスと順位,最終試験後の+30込み)
 	var nowScore = parseInt(((
-		Math.min(parseInt(vocal) + 30, 1500)
-		+ Math.min(parseInt(dance) + 30, 1500)
-		+ Math.min(parseInt(visual) + 30, 1500)) * 23) / 10) + 1700;
+		Math.min(parseInt(vocal) + 30, Max)
+		+ Math.min(parseInt(dance) + 30, Max)
+		+ Math.min(parseInt(visual) + 30, Max)) * 23) / 10) + 1700;
 
 	// ボーダーから現在の評価点を減算
 	for (var i = 0; i < rank.length; i++) {
