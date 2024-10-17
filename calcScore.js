@@ -23,6 +23,7 @@ var calc = function () {
 	// ステータス最大値
 	var Max = 1800,
 		// 各評価ランクのボーダー
+		ss = 16000,
 		s_plus = 14500,
 		s = 13000,
 		a_plus = 11500,
@@ -32,9 +33,9 @@ var calc = function () {
 		c_plus = 4500,
 		c = 3000,
 		// 評価ランクスコア
-		rank = [s_plus, s, a_plus, a, b_plus, b, c_plus, c],
+		rank = [ss, s_plus, s, a_plus, a, b_plus, b, c_plus, c],
 		// 評価ランク名
-		rankName = ['s_plus', 's', 'a_plus', 'a', 'b_plus', 'b', 'c_plus', 'c'],
+		rankName = ['ss', 's_plus', 's', 'a_plus', 'a', 'b_plus', 'b', 'c_plus', 'c'],
 		// 各ステータス値
 		vocal = document.getElementById('vocal').value,
 		dance = document.getElementById('dance').value,
